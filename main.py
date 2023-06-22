@@ -30,7 +30,7 @@ class table_scraper:
             writer.writerows(self.results)
 
     def run(self):
-        response = self.fetch('https://portal.gdc.cancer.gov/exploration?filters=%7B%22content%22%3A%5B%7B%22content%22%3A%7B%22field%22%3A%22cases.project.project_id%22%2C%22value%22%3A%5B%22TCGA-BRCA%22%5D%7D%2C%22op%22%3A%22in%22%7D%5D%2C%22op%22%3A%22and%22%7D')
+        response = self.fetch('https://portal.gdc.cancer.gov/exploration?searchTableTab=genes')
         self.parse(response)
 
 
